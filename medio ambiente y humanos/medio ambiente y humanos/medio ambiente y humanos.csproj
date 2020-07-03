@@ -6,4 +6,8 @@
     <RootNamespace>medio_ambiente_y_humanos</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EcosistemaUrbano\EcosistemaUrbano.csproj" />
+  </ItemGroup>
+
 </Project>

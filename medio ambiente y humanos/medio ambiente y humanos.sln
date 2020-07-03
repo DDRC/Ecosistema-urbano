@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "medio ambiente y humanos", "medio ambiente y humanos\medio ambiente y humanos.csproj", "{A51DACE0-9D2A-4707-AC78-0EFD8F0F08BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "medio ambiente y humanos", "medio ambiente y humanos\medio ambiente y humanos.csproj", "{A51DACE0-9D2A-4707-AC78-0EFD8F0F08BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosistemaUrbano", "EcosistemaUrbano\EcosistemaUrbano.csproj", "{5B11224B-C2AC-4844-A91D-B9C932CE9BED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A51DACE0-9D2A-4707-AC78-0EFD8F0F08BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A51DACE0-9D2A-4707-AC78-0EFD8F0F08BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A51DACE0-9D2A-4707-AC78-0EFD8F0F08BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B11224B-C2AC-4844-A91D-B9C932CE9BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B11224B-C2AC-4844-A91D-B9C932CE9BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B11224B-C2AC-4844-A91D-B9C932CE9BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B11224B-C2AC-4844-A91D-B9C932CE9BED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

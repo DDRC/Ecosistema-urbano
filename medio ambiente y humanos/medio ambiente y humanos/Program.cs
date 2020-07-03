@@ -1,52 +1,51 @@
 ﻿using System;
 using System.Reflection.PortableExecutable;
 using System.Runtime.CompilerServices;
+using EcosistemaUrbano;
 
 namespace medio_ambiente_y_humanos
 {
     class AmbienteUrbano
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var aleatorio= new Random();
             var plant=new Plantas
             {
                 Id = aleatorio.Next(),
-                NombreComun = "Diente de leon",
+                NombreComun = "diente de leon",
                 Comestible = "si",
                 Habito = "hierba"
             };
             var Persona = new Persona
             {
                 Id = aleatorio.Next(),
-                Nombre = "Heidy",
-                Apellido = "Rivas",
+                Nombre = "Juan",
+                Apellido = "Bautista",
                 Edad = 7,
-                Genero = "Femenino",
+                Genero = "Masculino",
                 Auto = new Autos
                 {
                     Id = aleatorio.Next(),
-                    Placa = "PAEO-756",
+                    Placa = "PAE-756",
                     Marca = "Chevrolet",
                     Modelo="Aveo",
-                    ConsumoGasolinaGal = 12.3
+                    DistanciaRecorrida = 2
                 },
                 Planta =plant,
                 Mascota = new Mascota
                 {
                     Id = aleatorio.Next(),
                     Nombre = "Manchas",
-                    Genero = "Hembra",
-                    TipoDeMascota = "Perro",
+                    TipoMascotaGenero = "Perra",
                     ComidaFavorita = "Sopa",
                     Planta=plant
                 }
                 
             };
-            Console.Write($"Un dia {Persona.Presentarse()}, fue al parque a");
-            Console.Write($" {Persona.Jugar()} y se divirtieron tanto que su {Persona.Mascota.Nombre}, corrio entre {Persona.Planta.NombreComun}");
-            Console.Write($" {Persona.Mascota.Dispersar()}, cuando regresaban a casa lo hicieron en su {Persona.Auto.Marca} {Persona.Auto.Modelo}");
-            Console.WriteLine($" Al final del dia mientras dormia {Persona.Nombre} soño como la  {Persona.Planta.Germinar()}");
+            Console.Write($"Diariamente {Persona.Presentarse()}, una persona promedio, que a diario interactua con su entorno decide");
+            Console.Write($" salir {Persona.Jugar()} y mientras jugaban, {Persona.Mascota.Moverse()} cerca a unas plantas de {Persona.Planta.NombreComun} dispersando sus semillas, permitiendo así que la especie perpetue;");
+            Console.WriteLine($" de regreso a casa en su {Persona.Auto.Marca} {Persona.Auto.Modelo} en un recorrido de {Persona.Auto.DistanciaRecorrida} KM, {Persona.Auto.CrearPolucion()}, consciente de las emisiones de CO2 de su auto, planto árboles y arbustos frutales, que además de los frutos, capta CO2 produciendo oxígeno.");
             Console.Write("Presione Enter para salir");
             Console.ReadKey();
         }
