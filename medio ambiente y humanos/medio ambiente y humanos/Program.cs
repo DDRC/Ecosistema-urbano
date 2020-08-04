@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Reflection.PortableExecutable;
 using System.Runtime.CompilerServices;
 using EcosistemaUrbano;
@@ -19,10 +20,10 @@ namespace medio_ambiente_y_humanos
             };
             var Persona = new Persona
             {
-                Id = aleatorio.Next(),
+                
                 Nombre = "Juan",
                 Apellido = "Bautista",
-                Edad = 7,
+                AñoNacimiento = 1995,
                 Genero = "Masculino",
                 Auto = new Autos
                 {
@@ -43,6 +44,10 @@ namespace medio_ambiente_y_humanos
                 }
                 
             };
+
+           
+
+            Console.WriteLine(Persona.CalculoEdad());
             Console.Write($"Diariamente {Persona.Presentarse()}, una persona promedio, que a diario interactua con su entorno decide");
             Console.Write($" salir {Persona.Jugar()} y mientras jugaban, {Persona.Mascota.Moverse()} cerca a unas plantas de {Persona.Planta.NombreComun} dispersando sus semillas, permitiendo así que la especie perpetue;");
             Console.WriteLine($" de regreso a casa en su {Persona.Auto.Marca} {Persona.Auto.Modelo} en un recorrido de {Persona.Auto.DistanciaRecorrida} KM, {Persona.Auto.CrearPolucion()}, consciente de las emisiones de CO2 de su auto, planto árboles y arbustos frutales, que además de los frutos, capta CO2 produciendo oxígeno.");

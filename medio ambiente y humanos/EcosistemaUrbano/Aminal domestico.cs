@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EcosistemaUrbano
 {
-    public class Mascota
+    public class Mascota:IAnimal
     {
         public int Id { get; set; }
         public string Nombre { get; set; }

@@ -4,7 +4,7 @@ _El siguiente proyecto muestra como se interrelacionan los individuos de un ecos
 
 ## Como funciona 🚀
 
-_Al ejecutarse el sistema mostrara una pequeña historia con datos ya ingresados, esta historia relata un dia en la vida de alguien comun_
+_Al ejecutarse el sistema mostrara una pequeña historia con datos ya ingresados, esta historia relata un dia en la vida de alguien comun, y como afecta al ambiente en el que vive._
 
 
 ### Pre-requisitos 

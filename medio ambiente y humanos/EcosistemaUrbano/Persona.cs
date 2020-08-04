@@ -4,16 +4,26 @@ using System.Text;
 
 namespace EcosistemaUrbano
 {
-    public class Persona
+    public class Persona :IPersonaAccion
     {
-        public int Id { get; set; }
+        
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public int Edad { get; set; }
+        
         public string Genero { get; set; }
         public Autos Auto { get; set; }
         public Mascota Mascota { get; set; }
         public Plantas Planta { get; set; }
+        private  Guid _id;
+        protected int _añoNacimiento;
+        public Guid Id { get => _id; }
+        public int AñoNacimiento
+        {
+            get => _añoNacimiento;
+            set => _añoNacimiento = value;
+        }
+        
+
         public string Presentarse()
         {
             return $"{Nombre} {Apellido}";
@@ -34,6 +44,14 @@ namespace EcosistemaUrbano
         public string Plantar()
         {
             return $"{Nombre} Plantara una {Planta.NombreComun} en el jardin de su patio";
+        }
+
+        public int CalculoEdad()
+        {
+           var añoActual = DateTime.Today.ToString("yyyy");
+            var valorAñoActual = int.Parse(añoActual);
+            var edad = valorAñoActual - _añoNacimiento;
+            return edad;
         }
     }
 }

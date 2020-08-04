@@ -6,7 +6,7 @@ namespace EcosistemaUrbano
 {
     public class Insectos
     {
-        public int Id { get; set; }
+        protected int Id { get; set; }
         public string Tipo { get; set; }
         public float Tamaño { get; set; }
         public string Color { get; set; }
