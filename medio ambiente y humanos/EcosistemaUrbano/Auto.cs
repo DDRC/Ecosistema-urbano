@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Dynamic;
 using System.Text;
 
 namespace EcosistemaUrbano
 {
+    [Table("Autos")]
    public class Autos:IAuto
     {
+        [Key]
         public int Id { get; set; }
         public string Placa { get; set; }
         public string Marca { get; set; }

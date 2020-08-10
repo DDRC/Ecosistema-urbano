@@ -20,7 +20,7 @@ namespace medio_ambiente_y_humanos
             };
             var Persona = new Persona
             {
-                
+                Barrio = new Barrio { NumeroBarrio = 1, Nombre = "Chillogallo" },
                 Nombre = "Juan",
                 Apellido = "Bautista",
                 AñoNacimiento = 1995,
@@ -47,11 +47,15 @@ namespace medio_ambiente_y_humanos
 
            
 
-            Console.WriteLine(Persona.CalculoEdad());
+            
             Console.Write($"Diariamente {Persona.Presentarse()}, una persona promedio, que a diario interactua con su entorno decide");
             Console.Write($" salir {Persona.Jugar()} y mientras jugaban, {Persona.Mascota.Moverse()} cerca a unas plantas de {Persona.Planta.NombreComun} dispersando sus semillas, permitiendo así que la especie perpetue;");
             Console.WriteLine($" de regreso a casa en su {Persona.Auto.Marca} {Persona.Auto.Modelo} en un recorrido de {Persona.Auto.DistanciaRecorrida} KM, {Persona.Auto.CrearPolucion()}, consciente de las emisiones de CO2 de su auto, planto árboles y arbustos frutales, que además de los frutos, capta CO2 produciendo oxígeno.");
-            Console.Write("Presione Enter para salir");
+            Console.WriteLine("Presione Enter para Guardar informacion de la persona en c:/informacionpersona");
+            var save=new DatosAGuardar().GuardarDatos(Persona);
+            Console.ReadKey();
+            
+            Console.Write("Presione Enter para Salir");
             Console.ReadKey();
         }
     }

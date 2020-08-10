@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace EcosistemaUrbano
 {
+    [Table("Insectos")]
     public class Insectos
     {
+        [Key]
         protected int Id { get; set; }
         public string Tipo { get; set; }
         public float Tamaño { get; set; }

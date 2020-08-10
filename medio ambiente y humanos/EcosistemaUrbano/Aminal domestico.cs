@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 using System.Text;
 
 namespace EcosistemaUrbano
 {
+    [Table("Mascotas")]
     public class Mascota:IAnimal
     {
+        [Key]
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string TipoMascotaGenero { get; set; }

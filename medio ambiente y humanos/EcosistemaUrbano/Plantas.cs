@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace EcosistemaUrbano
 {
+    [Table("Plantas")]
     public class Plantas
     {
+        [Key]
         public int Id { get; set; }
         public string NombreComun { get; set; }
         public string Comestible { get; set; }

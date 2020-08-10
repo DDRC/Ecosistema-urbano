@@ -1,21 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace EcosistemaUrbano
 {
-    public class Persona :IPersonaAccion
+    [Table("Personas")]
+    public class Persona : IPersonaAccion
     {
-        
+        [ForeignKey(name: "BarrioId")]
+        public Barrio Barrio { get; set; }
+        public int BarrioId { get => Barrio.NumeroBarrio; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        
         public string Genero { get; set; }
         public Autos Auto { get; set; }
         public Mascota Mascota { get; set; }
         public Plantas Planta { get; set; }
+        
         private  Guid _id;
         protected int _añoNacimiento;
+        [Key]
         public Guid Id { get => _id; }
         public int AñoNacimiento
         {
@@ -23,7 +29,7 @@ namespace EcosistemaUrbano
             set => _añoNacimiento = value;
         }
         
-
+       
         public string Presentarse()
         {
             return $"{Nombre} {Apellido}";
