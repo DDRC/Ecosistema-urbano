@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Reflection.PortableExecutable;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using EcosistemaUrbano;
 
 namespace medio_ambiente_y_humanos
@@ -45,12 +46,18 @@ namespace medio_ambiente_y_humanos
                 
             };
 
-           
-
-            
+            Parallel.For(0, 1000,i=>{
+                
+            });
+            marcos.ConsoleRectangle(75, 20, 0, 0, ConsoleColor.Cyan);
+            marcos.Draw();
+            Console.CursorLeft = 3;
+            Console.CursorTop = 3;
+            //Console.ReadLine();
             Console.Write($"Diariamente {Persona.Presentarse()}, una persona promedio, que a diario interactua con su entorno decide");
             Console.Write($" salir {Persona.Jugar()} y mientras jugaban, {Persona.Mascota.Moverse()} cerca a unas plantas de {Persona.Planta.NombreComun} dispersando sus semillas, permitiendo así que la especie perpetue;");
             Console.WriteLine($" de regreso a casa en su {Persona.Auto.Marca} {Persona.Auto.Modelo} en un recorrido de {Persona.Auto.DistanciaRecorrida} KM, {Persona.Auto.CrearPolucion()}, consciente de las emisiones de CO2 de su auto, planto árboles y arbustos frutales, que además de los frutos, capta CO2 produciendo oxígeno.");
+            
             Console.WriteLine("Presione Enter para Guardar informacion de la persona en c:/informacionpersona");
             var save=new DatosAGuardar().GuardarDatos(Persona);
             Console.ReadKey();
